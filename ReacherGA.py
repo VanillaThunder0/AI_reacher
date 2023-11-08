@@ -21,6 +21,7 @@ class Individual(nn.Module):
         self.fitness = 0
         self.flatten = nn.Flatten()
         self.layer1 = nn.Linear(INPUT_SIZE, self.neuronAmount)
+        # activation layer here?
         self.layer2 = nn.Linear(self.neuronAmount, OUTPUT_SIZE)
         self.environment = gym.make("Reacher-v4")
         self.observation, self.info = self.environment.reset()
@@ -91,6 +92,9 @@ class Individual(nn.Module):
                 for j, _ in enumerate(neuronConnection):
                     self.layer2.weight[i, j] = self.layer2.weight[i, j] + random.uniform(-LEARNING_RATE, LEARNING_RATE)
 
+    def crossover(self):
+        print("")
+
     def run(self, seed):
         for j in range(10):
             for x in range(50):
@@ -101,9 +105,11 @@ class Individual(nn.Module):
                 self.observation, reward, terminated, truncated, info = self.environment.step(action)
                 self.fitness += reward
                 if terminated:
+                    # extra reward here?
                     self.observation, self.info = self.environment.reset(seed=seed)
                     break
                 elif truncated:
+                    # niggative reward here
                     self.observation, self.info = self.environment.reset(seed=seed)
                     break
 
