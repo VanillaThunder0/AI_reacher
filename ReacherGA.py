@@ -11,7 +11,7 @@ POPULATION_SIZE = 100
 INPUT_SIZE = 11
 OUTPUT_SIZE = 2
 LEARNING_RATE = 0.015
-AMOUNT_OF_ANCESTORS = 5
+AMOUNT_OF_ANCESTORS = 10
 
 # Individual is a potential solution for the reacher problem -> a simple feedforward NN
 class Individual(nn.Module):
@@ -21,8 +21,8 @@ class Individual(nn.Module):
         self.fitness = 0
         self.flatten = nn.Flatten()
         self.layer1 = nn.Linear(INPUT_SIZE, self.neuronAmount)
-        # activation layer here?
-        self.layer2 = nn.Linear(self.neuronAmount, OUTPUT_SIZE)
+        self.layer2 = nn.Linear(self.neuronAmount, self.neuronAmount)
+        self.layer3 = nn.Linear(self.neuronAmount, OUTPUT_SIZE)
         self.environment = gym.make("Reacher-v4")
         self.observation, self.info = self.environment.reset()
 
@@ -69,11 +69,52 @@ class Individual(nn.Module):
             sum += individual.fitness
         
         return sum
+    
+    @classmethod
+    def uniformCrossover(self, population):
+
+        new_population = []
+        
+        with torch.no_grad():
+        # Mutate each individual in the list with a random other guy from the list
+            for index, individual in enumerate(population):
+                # Remove the current index from the list of possible other dudes to crossover with
+                list_ = list(range(len(population))) 
+                del list_[index]
+
+                # Get the random other dude to crossover with
+                partner = deepcopy(population[random.choice(list_)]) 
+                # Make a copy of the current individual 
+                current_individual = deepcopy(individual)
+
+                # Go through each layer and choose a gene from either individual randomly
+                for i, neuronConnection in enumerate(current_individual.layer1.weight):
+                    for j, _ in enumerate(neuronConnection):
+                        current_individual.layer1.weight[i, j] = random.choice([current_individual.layer1.weight[i, j], partner.layer1.weight[i, j]])
+
+                for i, neuronConnection in enumerate(current_individual.layer2.weight):
+                    for j, _ in enumerate(neuronConnection):
+                         current_individual.layer2.weight[i, j] = random.choice([current_individual.layer2.weight[i, j], partner.layer2.weight[i, j]])
+
+                for i, neuronConnection in enumerate(current_individual.layer3.weight):
+                    for j, _ in enumerate(neuronConnection):
+                         current_individual.layer3.weight[i, j] = random.choice([current_individual.layer3.weight[i, j], partner.layer3.weight[i, j]])
+
+                new_population.append(current_individual)
+        
+        return new_population
+
+    @classmethod
+    def singePointCrossover(self):
+        print("")
 
     def forward(self, x):
         x = self.flatten(x)
         x = self.layer1(x)
+        x = nn.functional.tanh(x)
         x = self.layer2(x)
+        x = nn.functional.tanh(x)
+        x = self.layer3(x)
         return torch.nn.functional.tanh(x)
 
     def printWeights(self):
@@ -92,8 +133,9 @@ class Individual(nn.Module):
                 for j, _ in enumerate(neuronConnection):
                     self.layer2.weight[i, j] = self.layer2.weight[i, j] + random.uniform(-LEARNING_RATE, LEARNING_RATE)
 
-    def crossover(self):
-        print("")
+            for i, neuronConnection in enumerate(self.layer3.weight):
+                for j, _ in enumerate(neuronConnection):
+                    self.layer3.weight[i, j] = self.layer3.weight[i, j] + random.uniform(-LEARNING_RATE, LEARNING_RATE)
 
     def run(self, seed):
         for j in range(10):
@@ -104,15 +146,15 @@ class Individual(nn.Module):
                 [action] = action
                 self.observation, reward, terminated, truncated, info = self.environment.step(action)
                 self.fitness += reward
+
                 if terminated:
-                    # extra reward here?
                     self.observation, self.info = self.environment.reset(seed=seed)
                     break
                 elif truncated:
+                    self.fitness -= 10
                     # niggative reward here
                     self.observation, self.info = self.environment.reset(seed=seed)
                     break
-
             self.observation, self.info = self.environment.reset(seed=seed)
 
     def runLong(self, seed):
@@ -125,6 +167,7 @@ class Individual(nn.Module):
             self.fitness += reward
 
             if terminated:
+                self.fitness += 10
                 self.observation, self.info = self.environment.reset(seed=seed)
                 break
             elif truncated:
