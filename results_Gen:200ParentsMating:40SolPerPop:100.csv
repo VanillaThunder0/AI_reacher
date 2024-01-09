@@ -1,0 +1,214 @@
+------ Start ------
+Generations to train for 200
+Number of parents mating 40
+Solutions per population 100
+
+Crossover type: single_point  and  mutation type: random 
+Fitness value of the best solution = -56.197853923750294
+Parameters of the best solution : [3.08880229e-01 2.99166476e+00 2.24398286e-01 2.26075954e+00
+ 2.90633768e-03 1.08371382e-03]
+Index of the best solution : 0
+12.436505858103434 minutes since start
+Best fitness value reached after 172 generations.
+
+Crossover type: single_point  and  mutation type: swap 
+Fitness value of the best solution = -394.3472649223259
+Parameters of the best solution : [ 3.22703616  3.79026831  0.56572681  3.22703616 -0.28913773  0.04529733]
+Index of the best solution : 0
+18.937426388263702 minutes since start
+Best fitness value reached after 14 generations.
+
+Crossover type: single_point  and  mutation type: inversion 
+Fitness value of the best solution = -326.67708223110435
+Parameters of the best solution : [1.3017585  3.79026831 0.22171717 3.79026831 0.15209302 0.04529733]
+Index of the best solution : 0
+26.395450230439504 minutes since start
+Best fitness value reached after 50 generations.
+
+Crossover type: single_point  and  mutation type: scramble 
+Fitness value of the best solution = -177.07348763940456
+Parameters of the best solution : [0.65087142 3.14310967 0.83772881 3.14310967 0.06812992 0.06812992]
+Index of the best solution : 0
+34.37067408959071 minutes since start
+Best fitness value reached after 31 generations.
+
+Crossover type: single_point  and  mutation type: None 
+Fitness value of the best solution = -608.8942215274906
+Parameters of the best solution : [ 2.19099474  3.79026831  0.94810854  2.63076646  0.59769204 -0.04984229]
+Index of the best solution : 0
+34.555152082443236 minutes since start
+Best fitness value reached after 7 generations.
+
+Crossover type: two_points  and  mutation type: random 
+Fitness value of the best solution = -54.77162338555108
+Parameters of the best solution : [2.93589793e-01 2.86133849e+00 2.31242117e-01 2.21705046e+00
+ 8.52650307e-04 6.29029142e-04]
+Index of the best solution : 0
+45.28691046237945 minutes since start
+Best fitness value reached after 180 generations.
+
+Crossover type: two_points  and  mutation type: swap 
+Fitness value of the best solution = -206.8484339259695
+Parameters of the best solution : [2.03913166 3.79026831 0.46813241 3.51109182 0.03615336 0.04529733]
+Index of the best solution : 0
+52.189172053337096 minutes since start
+Best fitness value reached after 39 generations.
+
+Crossover type: two_points  and  mutation type: inversion 
+Fitness value of the best solution = -112.71421337638294
+Parameters of the best solution : [0.22171717 3.79026831 0.55086393 3.79026831 0.03615336 0.04529733]
+Index of the best solution : 0
+60.532976690928145 minutes since start
+Best fitness value reached after 15 generations.
+
+Crossover type: two_points  and  mutation type: scramble 
+Fitness value of the best solution = -106.99620195347308
+Parameters of the best solution : [0.46813241 3.79026831 0.46813241 3.79026831 0.03615336 0.03615336]
+Index of the best solution : 0
+69.92740448315938 minutes since start
+Best fitness value reached after 13 generations.
+
+Crossover type: two_points  and  mutation type: None 
+Fitness value of the best solution = -356.95274174277796
+Parameters of the best solution : [-0.12457244  3.79026831  0.83772881  3.12815163  0.03615336  0.17640998]
+Index of the best solution : 0
+70.26913215319315 minutes since start
+Best fitness value reached after 5 generations.
+
+Crossover type: uniform  and  mutation type: random 
+Fitness value of the best solution = -53.613903322552765
+Parameters of the best solution : [ 2.02704410e-01  1.83401525e+00  2.09481596e-01  1.88515969e+00
+ -1.11051622e-03 -7.96238403e-04]
+Index of the best solution : 0
+84.89174015919367 minutes since start
+Best fitness value reached after 187 generations.
+
+Crossover type: uniform  and  mutation type: swap 
+Fitness value of the best solution = -180.83159250992622
+Parameters of the best solution : [0.57990814 3.79026831 0.17640998 2.03913166 0.03615336 0.04529733]
+Index of the best solution : 0
+90.67875632047654 minutes since start
+Best fitness value reached after 11 generations.
+
+Crossover type: uniform  and  mutation type: inversion 
+Fitness value of the best solution = -109.3520365372896
+Parameters of the best solution : [0.46813241 3.79026831 0.46813241 3.79026831 0.03615336 0.04529733]
+Index of the best solution : 0
+98.6710335612297 minutes since start
+Best fitness value reached after 22 generations.
+
+Crossover type: uniform  and  mutation type: scramble 
+Fitness value of the best solution = -122.02063099076688
+Parameters of the best solution : [0.57990814 3.76015991 0.57990814 3.76015991 0.04529733 0.04529733]
+Index of the best solution : 0
+107.98355676730473 minutes since start
+Best fitness value reached after 42 generations.
+
+Crossover type: uniform  and  mutation type: None 
+Fitness value of the best solution = -117.28841200059804
+Parameters of the best solution : [0.57990814 3.79026831 0.46813241 2.77463041 0.03615336 0.04529733]
+Index of the best solution : 0
+108.33443664709726 minutes since start
+Best fitness value reached after 7 generations.
+
+Crossover type: scattered  and  mutation type: random 
+Fitness value of the best solution = -53.613903322552765
+Parameters of the best solution : [ 2.02704410e-01  1.83401525e+00  2.09481596e-01  1.88515969e+00
+ -1.11051622e-03 -7.96238403e-04]
+Index of the best solution : 0
+121.22228746811548 minutes since start
+Best fitness value reached after 187 generations.
+
+Crossover type: scattered  and  mutation type: swap 
+Fitness value of the best solution = -180.83159250992622
+Parameters of the best solution : [0.57990814 3.79026831 0.17640998 2.03913166 0.03615336 0.04529733]
+Index of the best solution : 0
+126.06967928409577 minutes since start
+Best fitness value reached after 11 generations.
+
+Crossover type: scattered  and  mutation type: inversion 
+Fitness value of the best solution = -109.3520365372896
+Parameters of the best solution : [0.46813241 3.79026831 0.46813241 3.79026831 0.03615336 0.04529733]
+Index of the best solution : 0
+132.14740648269654 minutes since start
+Best fitness value reached after 22 generations.
+
+Crossover type: scattered  and  mutation type: scramble 
+Fitness value of the best solution = -122.02063099076688
+Parameters of the best solution : [0.57990814 3.76015991 0.57990814 3.76015991 0.04529733 0.04529733]
+Index of the best solution : 0
+139.76318549315135 minutes since start
+Best fitness value reached after 42 generations.
+
+Crossover type: scattered  and  mutation type: None 
+Fitness value of the best solution = -117.28841200059804
+Parameters of the best solution : [0.57990814 3.79026831 0.46813241 2.77463041 0.03615336 0.04529733]
+Index of the best solution : 0
+140.02399494250616 minutes since start
+Best fitness value reached after 7 generations.
+
+Crossover type: None  and  mutation type: random 
+Fitness value of the best solution = -83.35085688577153
+Parameters of the best solution : [0.31742634 5.21123725 0.30435049 3.8449889  0.02004263 0.0132038 ]
+Index of the best solution : 0
+150.90724820693333 minutes since start
+Best fitness value reached after 195 generations.
+
+Crossover type: None  and  mutation type: swap 
+Fitness value of the best solution = -732.0722436067088
+Parameters of the best solution : [ 0.69244032  3.22721532 -2.90020237  1.31035716  0.1191129   3.55675805]
+Index of the best solution : 0
+157.97899443705876 minutes since start
+Best fitness value reached after 5 generations.
+
+Crossover type: None  and  mutation type: inversion 
+Fitness value of the best solution = -710.3491994724088
+Parameters of the best solution : [ 0.7144443   1.59806688  0.59294084 -2.8261714  -0.06741473 -3.57309964]
+Index of the best solution : 0
+167.7691281080246 minutes since start
+Best fitness value reached after 17 generations.
+
+Crossover type: None  and  mutation type: scramble 
+Fitness value of the best solution = -635.3838211685065
+Parameters of the best solution : [ 0.65087142  3.76015991 -2.43656415  2.77463041 -0.04984229 -2.08121793]
+Index of the best solution : 0
+179.1080478866895 minutes since start
+Best fitness value reached after 19 generations.
+
+Crossover type: None  and  mutation type: None 
+Fitness value of the best solution = -788.9614598715871
+Parameters of the best solution : [ 3.51109182 -3.75240795  1.73502931  3.12815163 -3.78170221  0.17640998]
+Index of the best solution : 0
+180.4032354791959 minutes since start
+Best fitness value reached after 0 generations.
+
+
+------ Done ------
+Best combination is uniform with random
+
+
+('single_point random', -56.197853923750294)
+('single_point swap', -394.3472649223259)
+('single_point inversion', -326.67708223110435)
+('single_point scramble', -177.07348763940456)
+('single_point None', -608.8942215274906)
+('two_points random', -54.77162338555108)
+('two_points swap', -206.8484339259695)
+('two_points inversion', -112.71421337638294)
+('two_points scramble', -106.99620195347308)
+('two_points None', -356.95274174277796)
+('uniform random', -53.613903322552765)
+('uniform swap', -180.83159250992622)
+('uniform inversion', -109.3520365372896)
+('uniform scramble', -122.02063099076688)
+('uniform None', -117.28841200059804)
+('scattered random', -53.613903322552765)
+('scattered swap', -180.83159250992622)
+('scattered inversion', -109.3520365372896)
+('scattered scramble', -122.02063099076688)
+('scattered None', -117.28841200059804)
+('None random', -83.35085688577153)
+('None swap', -732.0722436067088)
+('None inversion', -710.3491994724088)
+('None scramble', -635.3838211685065)
+('None None', -788.9614598715871)
