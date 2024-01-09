@@ -124,6 +124,9 @@ best_crossover = ""
 table = []
 
 print("------ Start ------")
+print("Generations to train for", num_generations)
+print("Number of parents mating",num_parents_mating)
+print("Solutions per population", sol_per_pop)
 
 for i, crossover_type in enumerate(crossover_types):
     for j, mutation_type in enumerate(mutation_types): 
@@ -161,8 +164,8 @@ for i, crossover_type in enumerate(crossover_types):
             best_mutation = mutation_type
             best_crossover = crossover_type
              # Saving the GA instance.
-            filename = 'genetic' # The filename to which the instance is saved. The name is without extension.
-            ga_instance.save(filename=filename)
+        filename = 'genetic'+str(crossover_type)+str(mutation_type) # The filename to which the instance is saved. The name is without extension.
+        ga_instance.save(filename=filename)
 
         if ga_instance.best_solution_generation != -1:
             print(f"Best fitness value reached after {ga_instance.best_solution_generation} generations.")
