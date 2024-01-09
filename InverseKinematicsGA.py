@@ -158,7 +158,10 @@ for i, crossover_type in enumerate(crossover_types):
                             random_seed=GA_SEED,
                             crossover_type=crossover_type,
                             mutation_type=mutation_type,
-                            mutation_probability=0.3)
+                            mutation_probability=0.3,
+                            keep_elitism=0,
+                            parent_selection_type="tournament",
+                            K_tournament=5)
         # Running the GA to optimize the parameters of the function.
         ga_instance.run()
 
